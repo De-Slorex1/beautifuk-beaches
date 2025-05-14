@@ -1,0 +1,70 @@
+.beach-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 20px;
+  background-color: white;
+}
+
+.beach-cards {
+  width: 430px;
+  background-color: #fff;
+  font-family: 'Playfair Display', serif;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  height: 550px;
+}
+
+.beach-cards:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-5px);
+}
+
+.beach-cards img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.beach-cards:hover img {
+  transform: scale(1.05);
+}
+
+.beach-cards h3 {
+  font-size: 1.3rem;
+  margin: 1rem 1rem 0.5rem;
+  font-style: italic;
+  color: #333;
+  padding: 10px 0px;
+}
+
+.beach-cards p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0 1rem 1rem;
+  padding: 10px 0px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  color: blue;
+  background-color: white;
+  border: 2px solid #00aaff;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0 1rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00aaff;
+  color: white;
+}

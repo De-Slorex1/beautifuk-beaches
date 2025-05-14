@@ -1,0 +1,25 @@
+.ticker_container {
+    width: 100%;
+    /* background-color: #003366; */
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    
+  }
+  
+  .ticker_content {
+    animation: tickerScroll 10s linear infinite;
+    white-space: nowrap;
+  }
+  
+  @keyframes tickerScroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

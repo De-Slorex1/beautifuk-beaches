@@ -1,0 +1,51 @@
+.query-container {
+    max-width: 900px;
+    margin: 50px auto ;
+    padding: 30px;
+    background: #b9c9cc;
+    border-radius: 10px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .query-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #426a6b;
+  }
+  
+  .query-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .query-form input,
+  .query-form textarea {
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .query-form button {
+    background: #00796b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .query-form button:hover {
+    background: #004d40;
+  }
+  
+  @media (max-width: 600px) {
+    .query-container {
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+  
