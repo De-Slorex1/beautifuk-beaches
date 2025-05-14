@@ -11,7 +11,10 @@ const Navbar = () => {
   const location = useLocation();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setDropdownOpen(false); // close dropdown too
+  };
 
   const handleQueryClick = (e) => {
     e.preventDefault();
@@ -40,19 +43,24 @@ const Navbar = () => {
         <Count />
       </div>
 
+      {/* Hamburger Toggle */}
       <div className="hamburger" onClick={toggleMenu}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+        {menuOpen ? (
+          <span className="close-icon">✕</span> // or use an SVG here
+        ) : (
+          <>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </>
+        )}
       </div>
 
+      {/* Navigation Links */}
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
 
-        <li
-          className="dropdown"
-          onClick={() => setDropdownOpen(!dropdownOpen)}
-        >
+        <li className="dropdown" onClick={() => setDropdownOpen(!dropdownOpen)}>
           <span className="dropdown-toggle">Beach Zones ▾</span>
           {dropdownOpen && (
             <ul className="dropdown-menu">
@@ -65,11 +73,7 @@ const Navbar = () => {
         </li>
 
         <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
-
-        <li>
-          <a href="#query" onClick={handleQueryClick}>Query</a>
-        </li>
-
+        <li><a href="#query" onClick={handleQueryClick}>Query</a></li>
         <li><NavLink to="/Contact us" onClick={closeMenu}>Contact us</NavLink></li>
       </ul>
     </div>
