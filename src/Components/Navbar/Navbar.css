@@ -110,25 +110,6 @@
 .dropdown-menu li a:hover {
   color: #ffe600;
 }
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.bar {
-  height: 3px;
-  width: 25px;
-  background-color: #333;
-  margin: 4px 0;
-  transition: 0.4s;
-}
-
-.close-icon {
-  font-size: 28px;
-  color: #333;
-}
 
 
 /* Responsive Styles */
@@ -191,4 +172,28 @@
   .dropdown-menu li a:hover {
     color: #ffe600;
   }
+
+  .hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.close-icon {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 20.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+}
 }
